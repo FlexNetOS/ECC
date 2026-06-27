@@ -100,3 +100,11 @@ ecc2/target/
 .opencode/package-lock.json
 .opencode/node_modules/
 assets/images/security/badrudi-exploit.mp4
+
+# handoff continuity: binary ledger cache + migration artifacts are gitignored
+# (committed truth = .handoff/ledger.events.jsonl — ADR-0018 D1 / HFTASK-0067)
+.handoff/**/ledger.db
+.handoff/**/*.db-wal
+.handoff/**/*.db-shm
+.handoff/**/*.rvf
+.handoff/**/*.rvf.lock
